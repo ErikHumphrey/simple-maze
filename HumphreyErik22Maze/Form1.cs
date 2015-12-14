@@ -26,9 +26,19 @@ namespace HumphreyErik22Maze
 {
     public partial class frmMazeGame : Form
     {
+        // Global declarations
+        int timeElapsed;
+        bool gameStarted;
+
         public frmMazeGame()
         {
             InitializeComponent();
+        }
+
+        private void frmMazeGame_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Your objective is to navigate your cursor the start line (green) to the finish line (red) without touching any walls (blue).\r\n\r\nAs soon as you hit OK, your cursor will be placed on the start line.\r\nTry to get the fastest time!", "Maze Game");
+            Cursor.Position = new Point(Cursor.Position.X - 50, Cursor.Position.Y - 50);
         }
 
     }
