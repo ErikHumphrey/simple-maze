@@ -37,16 +37,19 @@ namespace HumphreyErik22Maze
 
         private void frmMazeGame_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Your objective is to navigate your cursor the start line (green) to the finish line (yellow) without touching any walls (blue).\r\n\r\nAs soon as you hit OK, your cursor will be placed on the start line.\r\nTry to get the fastest time!", "Maze Game");
+            MessageBox.Show("Your objective is to navigate your cursor the start line (green) to the finish line (yellow) without touching any walls (blue/red).\r\n\r\nAs soon as you hit OK, your cursor will be placed on the start line.\r\nTry to get the fastest time!",
+                "Maze Game",
+                MessageBoxButtons.OK);
             newGame();
 
         }
 
-        void newGame()
+        public void newGame()
         {
-            this.Cursor = new Cursor(Cursor.Current.Handle);
-            Cursor.Position = new Point(60, 80);
-            Cursor.Clip = new Rectangle(this.Location, this.Size);
+            tmrElapsedTime.Start();
+            timeElapsed = 0; // Reset elapsed time
+            lblTime.Text = "Time: " + timeElapsed.ToString();
+            Cursor.Position = new Point(815, 395); // Move the mouse cursor to the starting point
             gameStarted = true;
         }
 
@@ -54,16 +57,16 @@ namespace HumphreyErik22Maze
 
         private void btnWallToggler_Click(object sender, EventArgs e)
         {
-            if (btnWallToggler.Text == "A")
+            if (lblCheatDetector.Text == "A")
             {
-                btnWallToggler.Text = "B";
+                lblCheatDetector.Text = "B";
                 lblWallA1.Visible = lblWallA2.Visible = false;
                 lblWallB1.Visible = true;
             }
             // `else if` statement instead of just `else` is used in case I want to add more mechanics in the future 
-            else if (btnWallToggler.Text == "B")
+            else if (lblCheatDetector.Text == "B")
             {
-                btnWallToggler.Text = "A";
+                lblCheatDetector.Text = "A";
                 lblWallA1.Visible = lblWallA2.Visible = true;
                 lblWallB1.Visible = false;
             }
@@ -72,6 +75,7 @@ namespace HumphreyErik22Maze
         private void tmrElapsedTime_Tick(object sender, EventArgs e)
         {
             timeElapsed++;
+            lblTime.Text = "Time: " + timeElapsed.ToString(); // Update the label with the current time
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -276,15 +280,60 @@ namespace HumphreyErik22Maze
 
         private void wallEnter(object sender, EventArgs e)
         {
+            // Make sure the game is in progress when the user runs in to a wall.
             if (gameStarted == true)
             {
                 tmrElapsedTime.Stop();
                 gameStarted = false;
-                MessageBox.Show("Wall touched", "You ran into a wall and lost after " + timeElapsed + " seconds.\r\n\r\nClick OK to have another go.");
-                timeElapsed = 0;
-                lblTime.Text = "Time: " + timeElapsed.ToString();
+                // Start a new game if the user wants to try again. Otherwise, close the program.
+                DialogResult haveAnotherGo = MessageBox.Show("You ran into a wall and lost after " + timeElapsed + " seconds.\r\n\r\nClick OK to have another go.",
+                    "Wall touched",
+                    MessageBoxButtons.OK);
+                if (haveAnotherGo == DialogResult.OK)
+                    newGame();
+                else
+                    this.Close();
             }
         }
 
+        private void lblFinishLine_MouseEnter(object sender, EventArgs e)
+        {
+            // Make sure the game is in progress when the user runs in to a wall.
+            if (gameStarted == true)
+            {
+                tmrElapsedTime.Stop();
+                gameStarted = false;
+                // Start a new game if the user wants to try again. Otherwise, close the program.
+                DialogResult tryForABetterTime = MessageBox.Show("You reached the finish line in " + timeElapsed + " seconds.\r\n\r\nTry for a better time?",
+                    "You win",
+                    MessageBoxButtons.YesNo);
+                if (tryForABetterTime == DialogResult.Yes)
+                    newGame();
+                else
+                    this.Close();
+            }
+        }
+
+        // Pointer leaves the form, presumably by exiting where there aren't any walls
+        private void frmMazeGame_MouseLeave(object sender, EventArgs e)
+        {
+            //if (gameStarted == true)
+            //{
+
+           // }
+
+        }
+
+        private void label10_MouseEnter(object sender, EventArgs e)
+        {
+            frmCheater cheatDialog = new frmCheater();
+            cheatDialog.Show();
+            this.Hide();
+        }
+
+        private void frmMazeGame_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -69,7 +69,7 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnWallToggler = new System.Windows.Forms.Button();
+            this.lblCheatDetector = new System.Windows.Forms.Button();
             this.lblWallA2 = new System.Windows.Forms.Label();
             this.lblWallA1 = new System.Windows.Forms.Label();
             this.lblWallB1 = new System.Windows.Forms.Label();
@@ -77,6 +77,7 @@
             this.lblFinishLine = new System.Windows.Forms.Label();
             this.tmrElapsedTime = new System.Windows.Forms.Timer(this.components);
             this.lblTime = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -86,7 +87,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(20, 20);
             this.label1.TabIndex = 0;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             this.label1.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label2
@@ -96,7 +96,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(20, 89);
             this.label2.TabIndex = 1;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             this.label2.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label3
@@ -106,7 +105,6 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(134, 20);
             this.label3.TabIndex = 2;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             this.label3.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label4
@@ -116,7 +114,6 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 20);
             this.label4.TabIndex = 3;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             this.label4.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label5
@@ -126,7 +123,6 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 20);
             this.label5.TabIndex = 4;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             this.label5.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label6
@@ -136,7 +132,6 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(20, 89);
             this.label6.TabIndex = 5;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             this.label6.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label7
@@ -146,7 +141,6 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(20, 89);
             this.label7.TabIndex = 6;
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             this.label7.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label12
@@ -174,7 +168,6 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(20, 89);
             this.label13.TabIndex = 13;
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             this.label13.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label14
@@ -193,7 +186,6 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(20, 89);
             this.label15.TabIndex = 15;
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             this.label15.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label16
@@ -213,7 +205,6 @@
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(313, 30);
             this.label32.TabIndex = 32;
-            this.label32.Click += new System.EventHandler(this.label32_Click);
             this.label32.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label17
@@ -243,7 +234,6 @@
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(89, 20);
             this.label18.TabIndex = 35;
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             this.label18.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label19
@@ -263,7 +253,6 @@
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(71, 20);
             this.label20.TabIndex = 37;
-            this.label20.Click += new System.EventHandler(this.label20_Click);
             this.label20.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label21
@@ -282,7 +271,6 @@
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(20, 80);
             this.label22.TabIndex = 39;
-            this.label22.Click += new System.EventHandler(this.label22_Click);
             this.label22.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label23
@@ -302,7 +290,6 @@
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(44, 51);
             this.label24.TabIndex = 41;
-            this.label24.Click += new System.EventHandler(this.label24_Click);
             this.label24.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label25
@@ -322,7 +309,6 @@
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(89, 20);
             this.label26.TabIndex = 42;
-            this.label26.Click += new System.EventHandler(this.label26_Click);
             this.label26.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label27
@@ -342,7 +328,6 @@
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(20, 89);
             this.label28.TabIndex = 44;
-            this.label28.Click += new System.EventHandler(this.label28_Click);
             this.label28.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label29
@@ -352,7 +337,6 @@
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(58, 20);
             this.label29.TabIndex = 45;
-            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // label30
             // 
@@ -361,7 +345,6 @@
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(20, 42);
             this.label30.TabIndex = 46;
-            this.label30.Click += new System.EventHandler(this.label30_Click);
             this.label30.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label31
@@ -371,7 +354,6 @@
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(47, 20);
             this.label31.TabIndex = 47;
-            this.label31.Click += new System.EventHandler(this.label31_Click);
             this.label31.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label33
@@ -381,7 +363,6 @@
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(20, 62);
             this.label33.TabIndex = 48;
-            this.label33.Click += new System.EventHandler(this.label33_Click);
             this.label33.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label34
@@ -401,7 +382,6 @@
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(20, 131);
             this.label37.TabIndex = 52;
-            this.label37.Click += new System.EventHandler(this.label37_Click);
             // 
             // label38
             // 
@@ -440,7 +420,6 @@
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(45, 20);
             this.label41.TabIndex = 56;
-            this.label41.Click += new System.EventHandler(this.label41_Click);
             this.label41.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label42
@@ -470,26 +449,25 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(313, 30);
             this.label9.TabIndex = 59;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             this.label9.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
-            // btnWallToggler
+            // lblCheatDetector
             // 
-            this.btnWallToggler.BackColor = System.Drawing.Color.Transparent;
-            this.btnWallToggler.Font = new System.Drawing.Font("Myriad Web Pro", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWallToggler.Location = new System.Drawing.Point(312, 59);
-            this.btnWallToggler.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.btnWallToggler.Name = "btnWallToggler";
-            this.btnWallToggler.Size = new System.Drawing.Size(23, 23);
-            this.btnWallToggler.TabIndex = 60;
-            this.btnWallToggler.Text = "A";
-            this.btnWallToggler.UseVisualStyleBackColor = false;
-            this.btnWallToggler.Click += new System.EventHandler(this.btnWallToggler_Click);
+            this.lblCheatDetector.BackColor = System.Drawing.Color.Transparent;
+            this.lblCheatDetector.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCheatDetector.Location = new System.Drawing.Point(312, 59);
+            this.lblCheatDetector.Margin = new System.Windows.Forms.Padding(0);
+            this.lblCheatDetector.Name = "lblCheatDetector";
+            this.lblCheatDetector.Size = new System.Drawing.Size(23, 23);
+            this.lblCheatDetector.TabIndex = 60;
+            this.lblCheatDetector.Text = "A";
+            this.lblCheatDetector.UseVisualStyleBackColor = false;
+            this.lblCheatDetector.Click += new System.EventHandler(this.btnWallToggler_Click);
             // 
             // lblWallA2
             // 
             this.lblWallA2.BackColor = System.Drawing.Color.LightCoral;
-            this.lblWallA2.Font = new System.Drawing.Font("Myriad Web Pro", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblWallA2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblWallA2.Location = new System.Drawing.Point(19, 218);
             this.lblWallA2.Name = "lblWallA2";
             this.lblWallA2.Size = new System.Drawing.Size(25, 20);
@@ -500,7 +478,7 @@
             // lblWallA1
             // 
             this.lblWallA1.BackColor = System.Drawing.Color.LightCoral;
-            this.lblWallA1.Font = new System.Drawing.Font("Myriad Web Pro", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblWallA1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblWallA1.Location = new System.Drawing.Point(191, 80);
             this.lblWallA1.Name = "lblWallA1";
             this.lblWallA1.Size = new System.Drawing.Size(25, 20);
@@ -511,7 +489,7 @@
             // lblWallB1
             // 
             this.lblWallB1.BackColor = System.Drawing.Color.SkyBlue;
-            this.lblWallB1.Font = new System.Drawing.Font("Myriad Web Pro", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblWallB1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.lblWallB1.Location = new System.Drawing.Point(208, 120);
             this.lblWallB1.Name = "lblWallB1";
             this.lblWallB1.Size = new System.Drawing.Size(23, 20);
@@ -535,6 +513,7 @@
             this.lblFinishLine.Name = "lblFinishLine";
             this.lblFinishLine.Size = new System.Drawing.Size(25, 20);
             this.lblFinishLine.TabIndex = 65;
+            this.lblFinishLine.MouseEnter += new System.EventHandler(this.lblFinishLine_MouseEnter);
             // 
             // tmrElapsedTime
             // 
@@ -545,24 +524,36 @@
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.BackColor = System.Drawing.Color.SteelBlue;
-            this.lblTime.Font = new System.Drawing.Font("Myriad Web Pro Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
             this.lblTime.Location = new System.Drawing.Point(41, 291);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(96, 30);
+            this.lblTime.Size = new System.Drawing.Size(120, 33);
             this.lblTime.TabIndex = 66;
             this.lblTime.Text = "Time: 0";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.SteelBlue;
+            this.label10.Location = new System.Drawing.Point(12, -12);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.TabIndex = 67;
+            this.label10.Text = "label10";
+            this.label10.MouseEnter += new System.EventHandler(this.label10_MouseEnter);
             // 
             // frmMazeGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 328);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblWallB1);
             this.Controls.Add(this.lblWallA1);
             this.Controls.Add(this.lblWallA2);
-            this.Controls.Add(this.btnWallToggler);
+            this.Controls.Add(this.lblCheatDetector);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.label42);
@@ -611,7 +602,9 @@
             this.Name = "frmMazeGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMazeGame_FormClosing);
             this.Load += new System.EventHandler(this.frmMazeGame_Load);
+            this.MouseLeave += new System.EventHandler(this.frmMazeGame_MouseLeave);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -659,7 +652,7 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnWallToggler;
+        private System.Windows.Forms.Button lblCheatDetector;
         private System.Windows.Forms.Label lblWallA2;
         private System.Windows.Forms.Label lblWallA1;
         private System.Windows.Forms.Label lblWallB1;
@@ -667,6 +660,7 @@
         private System.Windows.Forms.Label lblFinishLine;
         private System.Windows.Forms.Timer tmrElapsedTime;
         private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Label label10;
     }
 }
 
