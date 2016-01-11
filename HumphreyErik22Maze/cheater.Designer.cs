@@ -84,7 +84,11 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.MinimizeBox = false;
             this.Name = "frmCheater";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cheater!";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCheater_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

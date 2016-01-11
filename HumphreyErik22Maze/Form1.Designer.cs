@@ -78,6 +78,7 @@
             this.tmrElapsedTime = new System.Windows.Forms.Timer(this.components);
             this.lblTime = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -150,7 +151,6 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(20, 20);
             this.label12.TabIndex = 7;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label11
             // 
@@ -159,7 +159,6 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(20, 89);
             this.label11.TabIndex = 14;
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label13
             // 
@@ -177,7 +176,6 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(20, 89);
             this.label14.TabIndex = 12;
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label15
             // 
@@ -195,7 +193,6 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(20, 89);
             this.label16.TabIndex = 16;
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             this.label16.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label32
@@ -214,7 +211,6 @@
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(21, 61);
             this.label17.TabIndex = 33;
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             this.label17.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label8
@@ -224,7 +220,6 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 20);
             this.label8.TabIndex = 34;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             this.label8.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label18
@@ -243,7 +238,6 @@
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(105, 20);
             this.label19.TabIndex = 36;
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             this.label19.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label20
@@ -262,7 +256,6 @@
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(59, 20);
             this.label21.TabIndex = 38;
-            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label22
             // 
@@ -280,7 +273,6 @@
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(55, 20);
             this.label23.TabIndex = 40;
-            this.label23.Click += new System.EventHandler(this.label23_Click);
             this.label23.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label24
@@ -299,7 +291,6 @@
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(185, 20);
             this.label25.TabIndex = 36;
-            this.label25.Click += new System.EventHandler(this.label25_Click);
             this.label25.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label26
@@ -318,7 +309,6 @@
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(20, 102);
             this.label27.TabIndex = 43;
-            this.label27.Click += new System.EventHandler(this.label27_Click);
             this.label27.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label28
@@ -372,7 +362,6 @@
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(163, 20);
             this.label34.TabIndex = 49;
-            this.label34.Click += new System.EventHandler(this.label34_Click);
             this.label34.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label37
@@ -390,7 +379,6 @@
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(20, 100);
             this.label38.TabIndex = 53;
-            this.label38.Click += new System.EventHandler(this.label38_Click);
             this.label38.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label39
@@ -400,7 +388,6 @@
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(86, 20);
             this.label39.TabIndex = 54;
-            this.label39.Click += new System.EventHandler(this.label39_Click);
             this.label39.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label40
@@ -410,7 +397,6 @@
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(20, 47);
             this.label40.TabIndex = 55;
-            this.label40.Click += new System.EventHandler(this.label40_Click);
             this.label40.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label41
@@ -429,7 +415,6 @@
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(38, 20);
             this.label42.TabIndex = 57;
-            this.label42.Click += new System.EventHandler(this.label42_Click);
             this.label42.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label35
@@ -439,7 +424,6 @@
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(84, 20);
             this.label35.TabIndex = 58;
-            this.label35.Click += new System.EventHandler(this.label35_Click);
             this.label35.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // label9
@@ -474,6 +458,7 @@
             this.lblWallA2.TabIndex = 61;
             this.lblWallA2.Text = "A";
             this.lblWallA2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblWallA2.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // lblWallA1
             // 
@@ -485,6 +470,7 @@
             this.lblWallA1.TabIndex = 62;
             this.lblWallA1.Text = "A";
             this.lblWallA1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblWallA1.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // lblWallB1
             // 
@@ -497,6 +483,7 @@
             this.lblWallB1.Text = "B";
             this.lblWallB1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblWallB1.Visible = false;
+            this.lblWallB1.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // lblStartPoint
             // 
@@ -534,20 +521,29 @@
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.SteelBlue;
-            this.label10.Location = new System.Drawing.Point(12, -12);
+            this.label10.Location = new System.Drawing.Point(12, -5);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 13);
             this.label10.TabIndex = 67;
-            this.label10.Text = "label10";
-            this.label10.MouseEnter += new System.EventHandler(this.label10_MouseEnter);
+            this.label10.MouseEnter += new System.EventHandler(this.wallEnter);
+            // 
+            // label36
+            // 
+            this.label36.BackColor = System.Drawing.Color.SteelBlue;
+            this.label36.Location = new System.Drawing.Point(303, 319);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(41, 13);
+            this.label36.TabIndex = 68;
+            this.label36.MouseEnter += new System.EventHandler(this.wallEnter);
             // 
             // frmMazeGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 328);
+            this.ControlBox = false;
+            this.Controls.Add(this.label36);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblWallB1);
@@ -604,7 +600,6 @@
             this.Text = " ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMazeGame_FormClosing);
             this.Load += new System.EventHandler(this.frmMazeGame_Load);
-            this.MouseLeave += new System.EventHandler(this.frmMazeGame_MouseLeave);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -661,6 +656,7 @@
         private System.Windows.Forms.Timer tmrElapsedTime;
         private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label36;
     }
 }
 

@@ -12,6 +12,8 @@
  * Description: Maze game; user must move cursor from start to finish without touching any walls
  */
 
+// Note: It doesn't matter how thick the walls are, I tested that even the thickest of the walls can be bypassed at high mouse speeds. So that's not a bug.
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,10 +48,17 @@ namespace HumphreyErik22Maze
 
         public void newGame()
         {
+
             tmrElapsedTime.Start();
             timeElapsed = 0; // Reset elapsed time
             lblTime.Text = "Time: " + timeElapsed.ToString();
-            Cursor.Position = new Point(815, 395); // Move the mouse cursor to the starting point
+            // Reset button puzzle
+            lblCheatDetector.Text = "A";
+            lblWallA1.Visible = lblWallA2.Visible = true;
+            lblWallB1.Visible = false;
+            // Move the mouse cursor to the starting point
+            Cursor.Position = new Point(652, 309);
+            // Cursor.Position = new Point(815, 395);            Setting for 1920x1080 resolution (what I use at home)
             gameStarted = true;
         }
 
@@ -78,205 +87,7 @@ namespace HumphreyErik22Maze
             lblTime.Text = "Time: " + timeElapsed.ToString(); // Update the label with the current time
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label32_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label24_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label26_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label27_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label28_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label29_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label30_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label31_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label33_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label34_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label37_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label38_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label39_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label40_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label41_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label42_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label35_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void wallEnter(object sender, EventArgs e)
         {
@@ -286,7 +97,7 @@ namespace HumphreyErik22Maze
                 tmrElapsedTime.Stop();
                 gameStarted = false;
                 // Start a new game if the user wants to try again. Otherwise, close the program.
-                DialogResult haveAnotherGo = MessageBox.Show("You ran into a wall and lost after " + timeElapsed + " seconds.\r\n\r\nClick OK to have another go.",
+                DialogResult haveAnotherGo = MessageBox.Show("You ran into a wall and lost after " + timeElapsed + " seconds. Take it slow!\r\n\r\nClick OK to have another go, or hit Alt+F4 twice to close the program.",
                     "Wall touched",
                     MessageBoxButtons.OK);
                 if (haveAnotherGo == DialogResult.OK)
@@ -314,26 +125,16 @@ namespace HumphreyErik22Maze
             }
         }
 
-        // Pointer leaves the form, presumably by exiting where there aren't any walls
-        private void frmMazeGame_MouseLeave(object sender, EventArgs e)
-        {
-            //if (gameStarted == true)
-            //{
-
-           // }
-
-        }
-
-        private void label10_MouseEnter(object sender, EventArgs e)
-        {
-            frmCheater cheatDialog = new frmCheater();
-            cheatDialog.Show();
-            this.Hide();
-        }
-
         private void frmMazeGame_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); // Close the program entirely
         }
+
+        /* Scrapped idea of extra dialog 
+         
+         frmCheater cheatDialog = new frmCheater();
+         cheatDialog.Show();
+         this.Hide();
+         */
     }
 }
