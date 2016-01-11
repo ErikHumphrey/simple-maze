@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMazeGame));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -513,7 +514,7 @@
             this.lblTime.BackColor = System.Drawing.Color.SteelBlue;
             this.lblTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.White;
-            this.lblTime.Location = new System.Drawing.Point(41, 291);
+            this.lblTime.Location = new System.Drawing.Point(32, 286);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(120, 33);
             this.lblTime.TabIndex = 66;
@@ -593,11 +594,12 @@
             this.Controls.Add(this.lblStartPoint);
             this.Controls.Add(this.lblFinishLine);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMazeGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = " ";
+            this.Text = " Erik Humphrey\'s Maze Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMazeGame_FormClosing);
             this.Load += new System.EventHandler(this.frmMazeGame_Load);
             this.ResumeLayout(false);
