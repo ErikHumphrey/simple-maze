@@ -1,15 +1,15 @@
 # simple-maze
 Simple .NET maze game, use your cursor to avoid the walls from start to finish.
 
-##Gameplay 
+## Gameplay 
 
 *(will add screenshot with labels)*
 
-##Installation
+## Installation
 
 Download from the [Releases page](https://github.com/ErikHumphrey/simple-maze/releases) and save to any directory. Double-click `HumphreyErik22SimpleMaze.exe` to play.
 
-####System requirements
+#### System requirements
 
 * Windows Vista or later
 
